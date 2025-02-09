@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ececec;
+    background-image: url(../src/show_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+    padding: 20px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.row {
+    width: 900px;
+    height: 550px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.side-image {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.side-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.text p {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-box {
+    width: 330px;
+}
+
+.input-box h4 {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input {
+    height: 45px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.input-box .input-field label {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 14px;
+    color: #666;
+    transition: 0.3s ease-in-out;
+}
+
+.input:focus~label,
+.input:valid~label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #007bff;
+    background: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.btn_cadastro button {
+    height: 45px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn_cadastro button:hover {
+    background: #0056b3;
+}
+
+#mensagem_erro_cadastro {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Mantém a estrutura em coluna */
+    }
+
+    .row {
+        max-width: 100%; /* Row ocupa toda a largura em dispositivos móveis */
+    }
+
+    .side-image {
+        display: none; /* Esconde a imagem lateral em dispositivos móveis */
+    }
+
+    .right {
+        padding: 10px; /* Menos padding na parte direita */
+    }
+
+    .input-box {
+        max-width: 100%; /* Campo de entrada ocupa toda a largura */
+    }
+
+    .input-box h4 {
+        font-size: 18px; /* Ajusta o tamanho do título */
+    }
+
+    .input {
+        font-size: 14px; /* Ajusta o tamanho da fonte nos campos */
+    }
+
+    .btn_cadastro button {
+        font-size: 14px; /* Ajusta o tamanho do botão */
+    }
+}
+
+/* Responsividade para telas pequenas */
+@media screen and (max-width: 480px) {
+    .main {
+        padding: 10px; /* Menos padding na main */
+    }
+
+    .row {
+        padding: 10px; /* Adiciona padding nas linhas em telas menores */
+    }
+
+    .input-box h4 {
+        font-size: 16px; /* Menor fonte no título */
+    }
+
+    .input {
+        font-size: 14px; /* Fonte pequena nos campos */
+    }
+
+    .btn_cadastro button {
+        font-size: 14px; /* Ajuste no tamanho do botão */
+    }
+
+    #mensagem_erro_cadastro {
+        font-size: 14px; /* Ajuste no tamanho da mensagem de erro */
+    }
+}

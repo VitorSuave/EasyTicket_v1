@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Tickets - Pagamento</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Efetuar Pagamento</h1>
+        
+        <!-- QR Code (Exemplo) -->
+        <div id="qrCode">
+            <img src="https://www.qrcode-monkey.com/img/default-preview-qr.svg" alt="QR Code" class="qr-img">
+            <p>Escaneie o QR Code pelo app do seu banco.</p>
+        </div>
+
+        <!-- Mensagem de Confirmação (aparece após 10s) -->
+        <div id="confirmacaoPagamento" style="display: none;">
+            <h2 style="color: #28a745;">Pagamento Efetuado!</h2>
+            <p>Seu ingresso foi reservado com sucesso. Você receberá um e-mail de confirmação.</p>
+        </div>
+    </div>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

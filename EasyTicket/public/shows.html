@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Tickets - Shows</title>
+    <link rel="stylesheet" href="../css/stylesShow.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="../src/Logo.jpg" type="image/x-icon">
+</head>
+<body>
+    <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../src/Shakira.png" class="d-block w-100" alt="Coldplay">
+            </div>
+            <div class="carousel-item">
+                <img src="../src/Oasis.jpg" class="d-block w-100" alt="Iron Maiden">
+            </div>
+            <div class="carousel-item">
+                <img src="../src/OliviaRodrigo.gif" class="d-block w-100" alt="Lollapalooza">
+            </div>
+            <div class="carousel-item">
+                <img src="../src/Pearl.jpg" class="d-block w-100" alt="Rock In Rio">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#showCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    <div class="container">
+        <h1>Escolha o Show</h1>
+        <div class="shows">
+            <!-- Show 1: Shakira - Las Mujeres Ya No Lloran Tour -->
+            <div class="show-card">
+                <img src="../src/Card_Shakirajpg.jpg" alt="Shakira">
+                <h2>Shakira - Las Mujeres Ya No Lloran Tour</h2>
+                <p><strong>Local:</strong> Maracanã, Rio de Janeiro - RJ</p>
+                <p><strong>Data:</strong> 11 de Março de 2025</p>
+                <p><strong>Horário:</strong> 21:00</p>
+                <label for="tipoIngresso1" style="font-weight: bold; color: #555;">Tipo de Ingresso:</label>
+                <select id="tipoIngresso1" class="select-ingresso">
+                    <option value="Pista">Pista - R$ 460,00 (+15%)</option>
+                    <option value="Cadeira-Inferior">Cadeira Inferior - R$ 690,00 (+15%)</option>
+                    <option value="Cadeira-Superior">Cadeira Superior - R$ 575,00 (+15%)</option>
+                    <option value="Vip">VIP - R$ 1150,00 (+15%)</option>
+                </select>
+                <button onclick="selecionarShow('Shakira - Las Mujeres Ya No Lloran Tour', 'Maracanã', '11/03/2025', '21:00', document.getElementById('tipoIngresso1').value)">Selecionar</button>
+            </div>
+            <!-- Show 2: Oasis - OASIS LIVE '25' -->
+            <div class="show-card">
+                <img src="../src/Card_Oasis.png" alt="Oasis">
+                <h2>Oasis - OASIS LIVE '25'</h2>
+                <p><strong>Local:</strong> Allianz Parque, São Paulo - SP</p>
+                <p><strong>Data:</strong> 15 de Abril de 2025</p>
+                <p><strong>Horário:</strong> 20:00</p>
+                <label for="tipoIngresso2" style="font-weight: bold; color: #555;">Tipo de Ingresso:</label>
+                <select id="tipoIngresso2" class="select-ingresso">
+                    <option value="Pista">Pista - R$ 402,50 (+15%)</option>
+                    <option value="Cadeira-Inferior">Cadeira Inferior - R$ 632,50 (+15%)</option>
+                    <option value="Cadeira-Superior">Cadeira Superior - R$ 517,50 (+15%)</option>
+                    <option value="Vip">VIP - R$ 1035,00 (+15%)</option>
+                </select>
+                <button onclick="selecionarShow('Oasis - OASIS LIVE \'25', 'Allianz Parque', '15/04/2025', '20:00', document.getElementById('tipoIngresso2').value)">Selecionar</button>
+            </div>
+            <!-- Show 3: Olivia Rodrigo - Guts Tour -->
+            <div class="show-card">
+                <img src="../src/Card_Olivia.jpg" alt="Olivia Rodrigo">
+                <h2>Olivia Rodrigo - Guts Tour</h2>
+                <p><strong>Local:</strong> Estádio do Morumbi, São Paulo - SP</p>
+                <p><strong>Data:</strong> 20 de Maio de 2025</p>
+                <p><strong>Horário:</strong> 19:00</p>
+                <label for="tipoIngresso3" style="font-weight: bold; color: #555;">Tipo de Ingresso:</label>
+                <select id="tipoIngresso3" class="select-ingresso">
+                    <option value="Pista">Pista - R$ 345,00 (+15%)</option>
+                    <option value="Cadeira-Inferior">Cadeira Inferior - R$ 575,00 (+15%)</option>
+                    <option value="Cadeira-Superior">Cadeira Superior - R$ 460,00 (+15%)</option>
+                    <option value="Vip">VIP - R$ 920,00 (+15%)</option>
+                </select>
+                <button onclick="selecionarShow('Olivia Rodrigo - Guts Tour', 'Estádio do Morumbi', '20/05/2025', '19:00', document.getElementById('tipoIngresso3').value)">Selecionar</button>
+            </div>
+            <!-- Show 4: Pearl Jam - 2025 Tour -->
+            <div class="show-card">
+                <img src="../src/Card_Pearl.png" alt="Pearl Jam">
+                <h2>Pearl Jam - 2025 Tour</h2>
+                <p><strong>Local:</strong> Estádio Couto Pereira, Curitiba - PR</p>
+                <p><strong>Data:</strong> 25 de Junho de 2025</p>
+                <p><strong>Horário:</strong> 18:00</p>
+                <label for="tipoIngresso4" style="font-weight: bold; color: #555;">Tipo de Ingresso:</label>
+                <select id="tipoIngresso4" class="select-ingresso">
+                    <option value="Pista">Pista - R$ 402,50 (+15%)</option>
+                    <option value="Cadeira-Inferior">Cadeira Inferior - R$ 632,50 (+15%)</option>
+                    <option value="Cadeira-Superior">Cadeira Superior - R$ 517,50 (+15%)</option>
+                    <option value="Vip">VIP - R$ 1035,00 (+15%)</option>
+                </select>
+                <button onclick="selecionarShow('Pearl Jam - 2025 Tour', 'Estádio Couto Pereira', '25/06/2025', '18:00', document.getElementById('tipoIngresso4').value)">Selecionar</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

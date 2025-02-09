@@ -1,0 +1,166 @@
+body {
+    padding-bottom: 18vh;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container h1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 10vh;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+.carousel {
+    padding: 0;
+    margin: 0;
+}
+
+.shows {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6vh;
+    justify-items: center;
+}
+
+.show-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionando a transição */
+}
+
+.show-card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho da div */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para dar destaque */
+}
+
+.show-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.show-card h2 {
+    font-size: 1.5em;
+    margin-top: 15px;
+    color: #333;
+}
+
+.show-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.show-card button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.show-card button:hover {
+    background-color: #218838;
+}
+
+.select-ingresso {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.select-ingresso:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .carousel-item img {
+        height: auto;
+        min-height: 200px; /* Ajusta a altura das imagens no carrossel para telas menores */
+    }
+
+    .shows {
+        grid-template-columns: repeat(1, 1fr); /* Deixa as shows em uma única coluna em dispositivos móveis */
+        gap: 4vh;
+    }
+
+    .show-card {
+        max-width: 100%; /* As cartas ocupam toda a largura disponível */
+        padding: 10px; /* Ajusta o padding nas cartas */
+    }
+
+    .show-card img {
+        height: 200px; /* Ajusta a altura da imagem para telas menores */
+    }
+
+    .show-card h2 {
+        font-size: 1.2em; /* Reduz o tamanho do título */
+    }
+
+    .select-ingresso {
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.2em; /* Reduz o tamanho da fonte no título */
+    }
+
+    .carousel-item img {
+        min-height: 150px; /* Ajusta a altura mínima da imagem */
+    }
+
+    .show-card {
+        max-width: 100%; /* As cartas ocupam toda a largura disponível */
+        padding: 8px; /* Ajusta o padding das cartas */
+    }
+
+    .show-card img {
+        height: 180px; /* Reduz a altura das imagens nas cartas */
+    }
+
+    .show-card h2 {
+        font-size: 1em; /* Ajusta ainda mais o tamanho do título */
+    }
+
+    .select-ingresso {
+        font-size: 12px; /* Ajuste no tamanho da fonte */
+    }
+}
